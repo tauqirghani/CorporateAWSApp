@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - ForntEnd/**  # Run the workflow only when files in the FrontEnd directory are changed
+      - ForntEnd/**  # Run the workflow when files in the FrontEnd directory are changed
     
 
 jobs:
