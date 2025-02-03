@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudWorks Worldwide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #90bace;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: #90bace;
+        }
+        .logo img {
+           width: 100%; /* Make the image fit the width of the bounding box */
+            height: 100%; /* Make the image fit the height of the bounding box */
+            object-fit: contain; /* Ensure the image maintains its aspect ratio */
+        }
+        .title {
+            text-align: center;
+        }
+        .title h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .title h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+        .menu button:hover {
+            background-color: #0056b3; /* Button background color on hover */
+        }
+        .menu button {
+            background-color: #007BFF; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Button padding */
+            font-size: 16px; /* Button font size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+        .left-column {
+            width: 30%;
+            padding-right: 20px;
+        }
+        .left-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .left-column ul li {
+            background-color: #90bace;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .right-column {
+            width: 70%;
+        }
+        .right-column h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        .right-column p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .right-column p.heading {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="logo.png" alt="CloudWorks Logo">
+        </div>
+        <div class="title">
+            <h1>CloudWorks</h1>
+            <h2>Worldwide</h2>
+        </div>
+        <div class="menu">
+            <button>Create Account</button>
+            <button>Login</button>
+            <button>Employees</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="left-column">
+            <ul>
+                <li>Our Focus</li>
+
+            </ul>
+        </div>
+        <div class="right-column">
+            <p class="heading">Agentic AI: Transforming Intelligence into Action</p>
+            <p>
+                Artificial Intelligence is evolving beyond static models and predictive analytics—Agentic AI represents the next frontier. Agentic AI systems are autonomous, goal-driven, and capable of making decisions, executing tasks, and dynamically adapting to complex environments. Unlike traditional AI, which relies on predefined inputs and responses, agentic AI models operate as intelligent agents, continuously learning, reasoning, and optimizing based on real-world interactions.
+                
+                Building Agentic AI requires a robust stack of tools, programming languages, and scalable infrastructure. At the core, we leverage Python, JavaScript (Node.js), and Rust for performance-critical tasks. Frameworks such as LangChain, AutoGPT, and Meta’s LlamaIndex provide the foundation for memory, reasoning, and action execution. Our infrastructure is built on cloud-native technologies, including Kubernetes, AWS Lambda, and Azure Functions, ensuring seamless deployment, orchestration, and real-time responsiveness.
+                
+                At CloudWorks Worldwide, we specialize in designing and implementing intelligent agents that enhance productivity, automate decision-making, and drive innovation across industries. Whether it’s autonomous research assistants, dynamic workflow automation, or AI-powered decision engines, we harness the full potential of agentic AI to shape the future of intelligent automation.</p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2023 CloudWorks Worldwide
+    </div>
+</body>
+</html>
