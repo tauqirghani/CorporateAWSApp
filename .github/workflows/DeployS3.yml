@@ -6,8 +6,7 @@ on:
     branches:
       - main
     paths:
-      - 'index.html'
-      - 'logo.png'
+      - ForntEnd/**  # Run the workflow only when files in the FrontEnd directory are changed
     
 
 jobs:
@@ -27,5 +26,5 @@ jobs:
 
       - name: Copy Selected Files to S3
         run: |
-          aws s3 cp index.html s3://${{ secrets.S3_BUCKET_NAME }}/index.html
-          aws s3 cp logo.png s3://${{ secrets.S3_BUCKET_NAME }}/logo.png
+          aws s3 cp FrontEnd/index.html s3://${{ secrets.S3_BUCKET_NAME }}/index.html
+          aws s3 cp FrontEnd/logo.png s3://${{ secrets.S3_BUCKET_NAME }}/logo.png
