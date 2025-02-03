@@ -2,6 +2,13 @@ name: Deploy Selected Files to S3
 
 on:
   workflow_dispatch:  # Allows you to run this workflow manually
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+      - 'logo.png'
+    
 
 jobs:
   deploy:
