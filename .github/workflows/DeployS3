@@ -8,6 +8,7 @@ on:
       - "index.html"
       - "logo.png"
       - "images/**"  # Adjust this if your logo is in a different folder
+    workflow_dispatch:  # Allows you to run this workflow manually
 
 jobs:
   deploy:
