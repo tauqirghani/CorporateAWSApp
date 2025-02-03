@@ -26,5 +26,5 @@ jobs:
 
       - name: Copy Selected Files to S3
         run: |
-          aws s3 cp FrontEnd/*.* s3://${{ secrets.S3_BUCKET_NAME }}
+          aws s3 cp FrontEnd s3://${{ secrets.S3_BUCKET_NAME }}
 
