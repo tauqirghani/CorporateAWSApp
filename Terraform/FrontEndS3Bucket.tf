@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "frontend" {
   bucket = "corporateawsapp-frontend"
+  force_destroy = true
 
   tags = {
     application = "corporateAWSApp"
@@ -31,6 +32,31 @@ resource "aws_s3_bucket_acl" "s3_acl" {
   acl    = "public-read"
 }
 
+// There are two ways to create a policy, I am using here the heredoc format. 
+// Read here for more information: https://developer.hashicorp.com/terraform/tutorials/aws/aws-iam-policy
+
+resource "aws_s3_bucket_policy" "s3_website_policy" {
+  bucket      = aws_s3_bucket.frontend.id
+  policy      = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject"
+        ],
+      "Resource": [
+        "${aws_s3_bucket.frontend.arn}/*"
+        ]
+    }
+  ]
+}
+EOF
+}
+
 resource "aws_s3_bucket_website_configuration" "website" {
   bucket = aws_s3_bucket.frontend.id
 
@@ -40,14 +66,5 @@ resource "aws_s3_bucket_website_configuration" "website" {
 
   error_document {
     key = "error.html"
-  }
-
-  routing_rule {
-    condition {
-      key_prefix_equals = "app/"
-    }
-    redirect {
-      replace_key_prefix_with = "documents/"
-    }
   }
 }
